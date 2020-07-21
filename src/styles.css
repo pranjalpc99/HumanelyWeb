@@ -411,6 +411,145 @@ body {
   .mobile-nav-active .mobile-nav-toggle i {
     color: #fff;
   }
+
+  .transparent_section{
+    height: 500px;
+    background: transparent;
+  }
+
+
+  .phone_scroll {
+    background: #151619;
+  }
+
+  #phone_scroll h1 {
+    margin: 0 0 20px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  #phone_scroll h1 span {
+    color: #fff;
+    border-bottom: 4px solid #1C94FE;
+  }
+
+  #phone_scroll h2 {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  #phone_scroll .btn-get-started {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #1C94FE;
+  }
+  
+  #phone_scroll .btn-get-started:hover {
+    background: #17b57d;
+  }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  .grid-12 {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.position-h2 {
+  grid-row: 7;
+  grid-column: 5 / span 4;
+  align-self: center;
+}
+
+.iphone-image-wrapper {
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  display: grid;
+  grid-auto-columns: 2fr 1fr 2fr;
+  grid-template-rows: repeat(1, 1fr);
+  align-items: center;
+}
+
+.iphone-image-wrapper p {
+  color: #FFF;
+  font-weight: 600;
+  font-size: 20px;
+  margin:0 0 8px 0;
+}
+
+.iphone-image {
+  grid-row: 1;
+  grid-column: 2 / span 1;
+  align-self: center;
+  justify-self:center;
+  text-align: center;
+  max-width: 100%;
+}
+
+.inner-phone {
+  position: relative;
+}
+
+.iphone1-text {
+  grid-column: 1;
+  text-align: right;
+}
+
+.iphone2-text {
+  grid-column: 3;
+}
+
+.iphone1-img {
+position: absolute;
+  z-index: 2;
+}
+
+.iphone-stick {
+  display: none;
+   position: absolute;
+  left: 54.5%;
+}
+
+.iphone2-img {
+position: absolute;
+  z-index: 2;
+}
+
+.iphone1 img {
+  width: 100%;
+}
+
+.iphone2 img {
+  width: 88%;
+}
+
+.iphone1-img-behind {
+  z-index: 1;
+  position: relative;
+}
+
+.iphone2-img-behind {
+  z-index: 1;
+  position: relative;
+}
+
   
   /*--------------------------------------------------------------
   # Hero Section
@@ -656,8 +795,80 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    color: #010483;
+    color: #1C94FE;
   }
+
+  /*--------------------------------------------------------------
+  # Waves
+  --------------------------------------------------------------*/
+  .wave{
+    display: block;
+    margin-top: 60px;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background: url("assets/img/wave.png");
+    background-size: 1000px 50px;
+  }
+
+  .wave1{
+    animation: animate 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+
+  @keyframes animate
+  {
+      0%
+      {
+        background-position-x: 0;
+      }
+
+      100%
+      {
+        background-position-x: 1000px;
+      }
+  }
+
+  .wave2{
+    animation: animate2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 5px;
+  }
+
+  @keyframes animate2
+  {
+      0%
+      {
+        background-position-x: 0;
+      }
+
+      100%
+      {
+        background-position-x: -1000px;
+      }
+  }
+
+  .wave3{
+    animation: animate 15s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 10px;
+  }
+
+  .wave4{
+    animation: animate2 5s linear infinite;
+    z-index: 999;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 15px;
+  }
+
   
   /*--------------------------------------------------------------
   # Breadcrumbs
@@ -725,13 +936,13 @@ body {
   .about {
     padding: 40px 0 0 0;
     background-color:#151619;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
   }
   
   .about .icon-boxes h3 {
     font-size: 28px;
     font-weight: 700;
-    color: #010483;
+    color: #1C94FE;
     margin-bottom: 15px;
   }
   
@@ -924,12 +1135,12 @@ body {
   }
   
   .features .icon-box h3 a {
-    color: #010483;
+    color: #01036f;
     transition: ease-in-out 0.3s;
   }
   
   .features .icon-box h3 a:hover {
-    color: #01036f;
+    color: #1C94FE;
   }
   
   .features .icon-box:hover {
@@ -940,7 +1151,7 @@ body {
   # Counts
   --------------------------------------------------------------*/
   .counts {
-    background: #f5f5ff;
+    background: #151619;
     padding: 70px 0 60px;
   }
   
@@ -968,7 +1179,7 @@ body {
     font-size: 36px;
     display: block;
     font-weight: 600;
-    color: #010483;
+    color: #1C94FE;
   }
   
   .counts .count-box p {
@@ -981,6 +1192,15 @@ body {
   /*--------------------------------------------------------------
   # Details
   --------------------------------------------------------------*/
+  .details {
+    background-color: #151619;
+  }
+
+  .two {
+    height: 50%;
+    width: auto;
+  }
+
   .details .content + .content {
     margin-top: 100px;
   }
@@ -988,7 +1208,11 @@ body {
   .details .content h3 {
     font-weight: 600;
     font-size: 26px;
-    color: #010483;
+    color: #1C94FE;
+  }
+
+  .details .content p {
+    color: rgba(255, 255, 255, 0.8);
   }
   
   .details .content ul {
@@ -998,6 +1222,7 @@ body {
   
   .details .content ul li {
     padding-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
   }
   
   .details .content ul i {
@@ -1013,10 +1238,14 @@ body {
   /*--------------------------------------------------------------
   # Gallery
   --------------------------------------------------------------*/
+  .gallery{
+    background-color: #151619;
+  }
+
   .gallery .gallery-item {
     overflow: hidden;
-    border-right: 3px solid #fff;
-    border-bottom: 3px solid #fff;
+    border-right: 3px solid #151619;
+    border-bottom: 3px solid #151619;
   }
   
   .gallery .gallery-item img {
@@ -1135,7 +1364,7 @@ body {
   # Team
   --------------------------------------------------------------*/
   .team {
-    background: #fff;
+    background: #151619;
   }
   
   .team .member {
@@ -1205,7 +1434,7 @@ body {
   }
   
   .team .member .social a:hover {
-    color: #1C94FE;
+    color: #0d12fc;
   }
   
   .team .member .social i {
@@ -1326,6 +1555,10 @@ body {
   /*--------------------------------------------------------------
   # F.A.Q
   --------------------------------------------------------------*/
+  .faq{
+    background-color: #151619;
+  }
+
   .faq .faq-list {
     padding: 0;
   }
@@ -1341,7 +1574,7 @@ body {
   
   .faq .faq-list li {
     padding: 20px;
-    background: #fff;
+    background: #333438;
     border-radius: 4px;
     position: relative;
   }
@@ -1375,6 +1608,7 @@ body {
   .faq .faq-list p {
     margin-bottom: 0;
     padding: 10px 0 0 0;
+    color:rgba(255, 255, 255, 0.8);
   }
   
   .faq .faq-list .icon-show {
@@ -1382,7 +1616,7 @@ body {
   }
   
   .faq .faq-list a.collapsed {
-    color: #343a40;
+    color: rgba(255, 255, 255, 0.8);
   }
   
   .faq .faq-list a.collapsed:hover {
@@ -1406,9 +1640,13 @@ body {
   /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
+  .contact{
+    background-color: #151619;
+  }
+
   .contact .info {
     width: 100%;
-    background: #fff;
+    background: #151619;
   }
   
   .contact .info i {
@@ -1417,7 +1655,7 @@ body {
     float: left;
     width: 44px;
     height: 44px;
-    background: #f0f0ff;
+    background: #151619;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1430,14 +1668,14 @@ body {
     font-size: 22px;
     font-weight: 600;
     margin-bottom: 5px;
-    color: #010483;
+    color: #1C94FE;
   }
   
   .contact .info p {
     padding: 0 0 0 60px;
     margin-bottom: 0;
     font-size: 14px;
-    color: #0205a1;
+    color: #1C94FE;
   }
   
   .contact .info .email, .contact .info .phone {
@@ -1446,12 +1684,12 @@ body {
   
   .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
     background: #1C94FE;
-    color: #fff;
+    color: #151619;
   }
   
   .contact .php-email-form {
     width: 100%;
-    background: #fff;
+    background: #151619;
   }
   
   .contact .php-email-form .form-group {
@@ -1468,7 +1706,7 @@ body {
   
   .contact .php-email-form .error-message {
     display: none;
-    color: #fff;
+    color: #151619;
     background: #ed3c0d;
     text-align: left;
     padding: 15px;
@@ -1481,7 +1719,7 @@ body {
   
   .contact .php-email-form .sent-message {
     display: none;
-    color: #fff;
+    color: #151619;
     background: #18d26e;
     text-align: center;
     padding: 15px;
@@ -1490,7 +1728,7 @@ body {
   
   .contact .php-email-form .loading {
     display: none;
-    background: #fff;
+    background: #151619;
     text-align: center;
     padding: 15px;
   }
@@ -1526,7 +1764,7 @@ body {
     background: #1C94FE;
     border: 0;
     padding: 10px 30px;
-    color: #fff;
+    color: #151619;
     transition: 0.4s;
     border-radius: 50px;
   }
@@ -1707,5 +1945,81 @@ body {
     #footer .footer-top .footer-info {
       margin: -20px 0 30px 0;
     }
+  }
+
+  .first-section {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+  }
+  
+  .first-section .images-wrapper {
+    position: absolute;
+  }
+  
+  .ingredient-images {
+    position: absolute;
+    width: 400px;
+    left: calc(50% - 400px);
+    height: 530px;
+    top: 420px;
+  }
+  
+  .section_1_01 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .section_1_02 {
+    position: absolute;
+    top: 80px;
+    right: 130px;
+  }
+  
+  .section_1_03 {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+  }
+  
+  .section_1_04 {
+    position: absolute;
+    top: 200px;
+    right: 120px;
+  }
+  
+  .section_1_05 {
+    position: absolute;
+    top: 225px;
+    right: 150px;
+  }
+  
+  .section_1_06 {
+    position: absolute;
+    top: 170px;
+    right: 210px;
+  }
+  
+  .section_1_07 {
+    position: absolute;
+    top: 250px;
+    right: 10px;
+  }
+  
+  .section_1_08 {
+    position: absolute;
+    top: 320px;
+    right: 110px;
+  }
+  
+  .section_1_09 {
+    position: absolute;
+    top: 370px;
+    right: 10px;
   }
   
