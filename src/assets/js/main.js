@@ -4,6 +4,8 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+
 !(function($) {
   "use strict";
 
@@ -21,10 +23,28 @@
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
+      console.log(target);
+      console.log(target.attr("class"));
       if (target.length) {
         e.preventDefault();
 
-        var scrollto = target.offset().top - scrolltoOffset;
+        console.log($('#header').outerHeight());
+        console.log(scrolltoOffset);
+
+
+        console.log(target.offset().top);
+        var diff = -60;
+
+        if(target.attr("class")==="about"){
+          console.log("about class click");
+          var scrollto = target.offset().top - $('#header').outerHeight()-diff;
+        }
+        else{
+          var scrollto = target.offset().top - $('#header').outerHeight()-21;
+        }
+
+        
+        console.log(scrollto);
 
         if ($(this).attr("href") == '#header') {
           scrollto = 0;
